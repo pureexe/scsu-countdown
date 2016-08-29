@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- screen resolution: FIX 1280x768 -->
+  <title>SCSU countdown</title>
+  <link rel="stylesheet" href="styles/materialize.min.css">
+</head>
+<body style="margin:0px;">
+  <div style="margin:0px;width:100vw;height:100vh;background-color:#fff;position:relative">
+    <img src="images/sc-logo.png" style="right:20px;top:20px;position:absolute;width:150px;height:150px;"/>
+    <img src="images/su-logo.png" style="right:170px;top:20px;position:absolute;width:150px;height:150px;"/>
+    <img src="images/jumpadee.png" style="top:calc(15vh);position:absolute;height:300px;width:300px;left:calc(50vw - 150px);z-index:20;">
+    <img src="images/atom.png" style="position:absolute;top:15vh;left:15vw;height:80px;width:80px;"/>
+    <img src="images/dna.png" style="position:absolute;top:30vh;left:80vw;height:80px;width:80px;"/>
+    <img src="images/round.png" style="position:absolute;top:85vh;left:10vw;height:80px;width:80px;"/>
+    <img src="images/flask.png" style="position:absolute;top:80vh;left:85vw;height:80px;width:80px;"/>
+    <div id="countdown " style="position:absolute;left:calc(50vw - 350px);top:calc(15vh + 281px);width:700px;height:200px;;z-index:10;">
+      <div id="countdown-bg" class="center card" style="position:relative;width:100%;height:100%;background-color:#006d5f;margin-top:0px;">
+          <span id="time" class="white-text" style="font-size:150px;">03:00:00</span>
+      </div>
+    </div>
+    <div class="center" style="position:absolute;left:0px;width:100vw;top:calc(15vh + 550px);">
+      <a href="#" id="start" style="margin-left:50px;right:50px;"><img src="images/ic-play.png"/></a>
+      <a href="#" id="pause" style="margin-left:50px;right:50px;display:none;"><img src="images/ic-pause.png" id="pause" /></a>
+      <a href="#" id="plusone" style="margin-left:50px;right:50px;"><img src="images/ic-plusone.png" id="plusone"  /></a>
+      <a href="#" id="reset" style="margin-left:50px;right:50px;"><img src="images/ic-reset.png" id="reset" /></a>
+      <a href="#modal1" id="settings" class="modal-trigger" style="margin-left:50px;right:50px;"><img src="images/ic-setting.png" /></a>
+    </div>
+  </div>
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>ตั้งเวลา</h4>
+      <div class="center" style="width:100%;">
+        <a class="waves-effect waves-light btn" id="addHour">+</a>
+        <a class="waves-effect waves-light btn" id="addMin">+</a>
+        <a class="waves-effect waves-light btn" id="addSec">+</a>
+      </div>
+      <div class="center" style="width:100%;">
+        <span id="starttime" class="black-text" style="font-size:150px;">03:00:00</span>
+      </div>
+      <div class="center" style="width:100%;">
+        <a class="waves-effect waves-light btn" id="removeHour">-</a>
+        <a class="waves-effect waves-light btn" id="removeMin">-</a>
+        <a class="waves-effect waves-light btn" id="removeSec">-</a>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a id="setSettings" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">ตกลง</a>
+    </div>
+  </div>
+  <script src="scripts/jquery-3.1.0.min.js"></script>
+  <script src="scripts/materialize.min.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
